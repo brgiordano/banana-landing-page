@@ -1,0 +1,340 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+:root{
+    --font01: 'Source Sans Pro', sans-serif;
+    --font02: 'Playfair Display', serif;
+
+    --color01: #FFFFFF;
+    --color02: #9f801a;
+    --color03: #fbcd4f; /*cor do bacground sem os pontos*/ 
+    --color04: #FFCA41; /*cor do background dots */
+    --color05: rgba(255, 255, 255, 0.65);
+}
+html{
+    scroll-behavior: smooth;
+    min-width: 525px;
+}
+body{
+    font-family: var(--font01);
+}
+h1{
+    font-size: 48px;
+    font-weight: 300;
+}
+h2{
+    font-size: 20px;
+    font-weight: 200;
+}
+a{
+    text-decoration: none;
+}
+p{
+    font-size: 24px;
+    font-weight: 200;
+}
+.flex{
+    display: flex;
+}
+.container{
+    margin: auto;
+    width: 90%;
+    max-width: 1200px;
+}
+.bg01{
+    background-color: var(--color03);
+    background-image: url(images/banana_landing_page/dots.png);
+}
+.bg02{
+    background-color: var(--color01);
+    background-image: url(images/banana_landing_page/dots-2.png);
+}
+/* ------------------- HEADER -------------------*/
+.header-container{
+    margin: auto;
+    padding: 15px 0;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-container #header-logo{
+    width: 45px;
+}
+.header-container #menu ul{
+    list-style: none;
+}
+.header-container #menu li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 103px;
+}
+.header-container #menu li a{
+    color: var(--color02);
+    font-size: 18px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+}
+.header-container #menu li:hover{
+    border: 1px solid var(--color02);
+    border-radius: 17.5px;
+}
+#header-logo{
+    cursor: pointer;
+    transition: 1s;
+}
+#header-logo:hover{
+    transform: rotate(30deg);
+}
+
+/* ------------------- OUTDOOR -------------------*/
+#title{
+    color: var(--color01);
+    letter-spacing: 1px;
+}
+.title-outdoor{
+    text-align: center;
+}
+.title-outdoor h1{
+    padding-bottom: 20px;
+    text-shadow: 0 1px 10px var(--color02);
+}
+.title-outdoor img{
+    width: 75%;
+}
+
+.title-outdoor #sub-outdoor{
+    display: block;
+    font-size: 36px;
+    color: var(--color01);
+    text-shadow: 0 1px 15px var(--color02);
+}
+.title-outdoor a{
+    margin: auto;
+    display: block;
+    width: 40px;
+    height: 20px;
+    border-radius: 40px 40px 0 0;
+    background: var(--color01) url(images/banana_landing_page/arrow-40x.png) no-repeat center 4px;
+    background-size: 20px;
+}
+
+
+/* ------------------- ABOUT -------------------*/
+#about{
+    color: var(--color02);
+    text-align: center;
+}
+
+.health-content{
+    padding: 30px 0;
+    background-color: var(--color05);
+}
+.desc-cont{
+    width: 95%;
+    margin: auto;
+}
+#banana-info{
+    width: 80%;
+}
+
+.vitamin-content{
+    padding: 30px 0;
+    background: var(--color01) url(images/banana_landing_page/banana-shake2.webp) no-repeat;
+    background-size: cover;
+}
+.vitamin-content .blur-bg{
+    margin: auto;
+    padding: 5px;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: #9f801a0a;
+    backdrop-filter: blur(30px);
+}
+
+#vitamin-desc{
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+#vitamin-desc p{
+    color: var(--color01);
+    border-radius: 60px 0 60px 0;
+    font-weight: 300;
+    padding: 25px;
+    width: 300px;
+    background-color: var(--color03);
+    box-shadow: 0 10px 30px 0 #9f801a59;
+}
+
+/* ------------------- TYPES -------------------*/
+#types{
+    color: var(--color01);
+}
+
+.types-content{
+    text-align: center;
+    padding: 30px 0;
+    background-color: var(--color03);
+    background-image: url(images/banana_landing_page/bg-banana-icons2.png);
+}
+#pic01 img{
+    width: 150px;
+}
+.varieties{
+    margin-top: 30px;
+}
+.banana-type:nth-child(2){
+    margin: 0 20px;
+}
+.banana-type{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.banana-type img{
+    width: 85%;
+    max-width: 200px;
+}
+
+/* ------------------- DISHES -------------------*/
+.dishes-content{
+    color: var(--color01);
+    background-color: var(--color03);
+    background-image: url(images/banana_landing_page/receita-com-banana.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+.dishes-content .desc-cont h1+p{
+    margin-bottom: 30px;
+}
+#backdrop{
+    background-color: #0000008c;
+    padding: 40px 0;
+    backdrop-filter: blur(3px);
+}
+
+#dish-cards .card{
+    flex: 1;
+    margin: 10px;
+    height: 300px;
+    border-radius: 7px;
+    background-size: cover;
+    background-position: center;
+}
+#dish-cards .card:nth-child(1){
+    background-image: url(images/banana_landing_page/receita-panqueca.jpg);
+    margin-left: 0;
+}
+#dish-cards .card:nth-child(2){
+    background-image: url(images/banana_landing_page/receita-sorvete.jpg);
+}
+#dish-cards .card:nth-last-child(1){
+    margin-right: 0;
+    background-image: url(images/banana_landing_page/receita-torta-banoffee.jpg);
+}
+#dish-cards a{
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+}
+#dish-cards .card p{
+    color: var(--color01);
+    background: linear-gradient(0deg, rgba(0,0,0,1)15%, rgba(0,0,0,0) 100%);
+    padding: 150px 5px 10px;
+    border-radius: 7px;
+    width: 100%;
+}
+#dish-cards .card:hover{
+    /* background-size: 175%; */
+    transform:scale(1.03);
+}
+
+/* ------------------- BUY ------------------- */
+.buy-content{
+    color: var(--color02);
+    background-color: var(--color05);
+    padding: 30px 0;
+    text-align: center;
+}
+#pic02 img{
+    width: 50%;
+}
+.buy-opt{
+    margin: 30px 20px;
+}
+
+.opt:nth-child(2){
+    margin: 0 20px;
+}
+
+.buy-opt img{
+    width: 70%;
+}
+.opt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.buy-opt a{
+    color: inherit;
+    margin-top: 10px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    border: 1px solid var(--color02);
+    border-radius: 17.5px;
+}
+.buy-opt a:hover{
+    color: var(--color01);
+    background-color: var(--color02);
+}
+
+/* ------------------- FOOTER ------------------- */
+footer .container{
+    padding: 10px 0;
+    text-align: center;
+    background: var(--color03) url(images/banana_landing_page/bg-banana-icons.png);
+    background-size: contain;
+}
+footer .container p{
+    font-size: 16px;
+}
+
+/* ------------------- MEDIA ------------------- */
+@media (max-width: 768px){
+    .container{
+        width: 100%;
+    }
+    #banana-info{
+        width: 100%;
+    }
+    .varieties{
+        flex-direction: column;
+        align-items: center;
+    }
+    .banana-type{
+        flex-direction: row;
+        align-items: flex-start;
+    }.banana-type p{
+        height: 100%;
+        padding: 0 45px;
+    }
+    .banana-type:nth-child(2){
+        margin: 20px 0;
+    }
+    #dish-cards{
+        flex-direction: column;
+        align-items: center;
+    }
+    #dish-cards .card{
+        flex: none;
+        width: 80%;
+        margin: 10px 0;
+    }
+}
